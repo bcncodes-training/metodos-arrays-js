@@ -20,22 +20,29 @@ const finalGrades = students.map(function(elem) {
 
 //Ejercicio 3
 
-let averageCalories=menu.reduce(
-  (sum,food) => {
+ let averageCalories=menu.reduce(
+  (sum,food,i,a) => {
     console.log("accumulator is: ", sum, "and current value is: ", food.calories);
-    return (sum+food.calories)/2}
+    return sum+food.calories/a.length}
 ,0)
+
 
 console.log(averageCalories);
 
+//Ejercicio 3.bis Filtra los elemntos con indice calórico superior a la media
 
-//Ejercicio 3.bis
-
-
+let overCalorics= menu.filter(e => e.calories>averageCalories);
+console.log(overCalorics);
 
 //Ejercicio 4
 
 
 let avgRate = product.reviews.reduce(function(p,c,i,a){return p + (c.rate/a.length)},0);
-
 console.log(avgRate);
+
+//Ejercicio 4.bis Filtra los comentarios de mayor a  menor rate
+
+product.reviews.sort((a,b) => a.rate - b.rate);
+
+console.log(product.reviews);
+
