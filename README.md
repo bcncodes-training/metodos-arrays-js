@@ -12,21 +12,6 @@ Dada un array de nombre de ciudades, devolver un array con la primera letra de c
 
 Imaginad que sois profesores y queréis calificar a los estudiantes en función de sus resultados en 2 proyectos (40% de la nota final) y el examen final (60% de la nota final). La información de partida es la siguiente:
 
-Imagine we are a Math teacher and we need to grade our students basing on their performance on 2 projects (40% of final grade) and their final exam (60% of final grade). We got the info for each student in an object that looks like this:
-
-```javascript=
-{
-  name: "Student Name",
-  firstProject: 80,
-  secondProject: 75,
-  finalExam:
-}
-```
-
-So basically for the whole class, we have an array of objects, and we need an array only with student´s name, and their final grade. Let´s do it:
-
-Here is the data:
-
 ```javascript
         let  students = [
         {
