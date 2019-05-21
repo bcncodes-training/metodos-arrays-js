@@ -136,3 +136,5 @@ let product = {
 ```
 Queremos mostrar el producto en nuestra web pero no queremos mostrar todos los comentarios de primera vista. Sólo necesitamos la valoración media para que los clientes se hagan una idea rápida de la valoración del producto.
 
+### BONUS
+Traslada la media a pintar "estrellas" de valoración en una página web con la imagen del producto.
