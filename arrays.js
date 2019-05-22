@@ -46,3 +46,55 @@ product.reviews.sort((a,b) => a.rate - b.rate);
 
 console.log(product.reviews);
 
+//Bonus: Pintar estrellitas de valoración
+//index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="imagen"></div>
+   
+
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span>
+
+    <script src="stars.js"></script>
+</body>
+</html>
+
+//style.scss
+.imagen{
+    background: white url("https://picsum.photos/id/237/200/300") no-repeat;
+    background-size: contain;
+    width: 100vw;
+    height:30vh;
+}
+
+.checked{
+    color: orange;
+}
+
+//stars.js
+  function pintarEstrellitas(){
+      let stars = document.getElementsByClassName('fa-star');
+
+      for(i=0; i<Math.round(avgRate);i++){
+          stars[i].classList.add('checked');
+      }
+  }
+
+  onload = pintarEstrellitas;
+
+
