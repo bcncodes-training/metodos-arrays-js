@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+	padding: 0;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .imagen {
+        height: 600px;
+        width: 600px;
+        background-image: url('./jim_store.png');
+        margin: 20px auto;
+        border-radius: 15px;
+        box-shadow: -5px 5px 10px rgba(100,100,100,.8);;
+    }
+    #boton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+        background: #000;
+        
+        a{
+            position: absolute;
+            padding: 15px 40px;
+            border: 2px solid #fff;
+            font-family: sans-serif;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 25px;
+            display: block;
+            box-sizing: border-box;
+            border-radius: 60px;
+            color: rgb(218, 129, 129);
+            overflow: hidden;
+          transition:.5s;
+        }
+        a:hover{
+            color: #fff;
+            transition-delay: 1s;
+        }
+        a::before{
+            content: "";
+            position: absolute;
+            left: 60px;
+            top: 50%;
+            transform: translateY(-50%) scale(0);
+            width: 10px;
+            height: 10px;
+            background:#b32400;
+            border-radius: 50%;
+            z-index: -1;
+            transition-property: left, transform;
+            transition-delay:0s, 0s;
+            transition-duration: 1s;
+          transition-duration: 1s,0.5s;
+        }
+        a:hover::before{
+            left: 10px;
+            transition-delay:0s,1s;
+            transform: translateY(-50%) scale(30);
+            opacity: 1;
+        }
+        a::after{
+            content: "";
+            position: absolute;
+            right: 60px;
+            top: 50%;
+            transform: translateY(-50%) scale(.6);
+            width: 10px;
+            height: 10px;
+            background:#b32400;
+            border-radius: 50%;
+            z-index: -1;
+            transition-property: right, transform;
+            transition-delay:0s, 0s;
+            transition-duration: 1s,0.5s;
+            opacity: 0;
+        }
+        a:hover::after{
+            right: 10px;
+            transition-delay:0s,1s;
+            transform: translateY(-50%) scale(30);
+            opacity: 1;
+        }
+    }
+
+    #star {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .open {
+        display: initial;
+    }
+    
+    .close {
+        display: none;
+    }
+    
+    .checked{
+        color: orange;
+    }
+}
+
