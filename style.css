@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 900px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .imagen {
+  height: 600px;
+  width: 600px;
+  background-image: url("./jim_store.png");
+  margin: 20px auto;
+  border-radius: 15px;
+  -webkit-box-shadow: -5px 5px 10px rgba(100, 100, 100, 0.8);
+          box-shadow: -5px 5px 10px rgba(100, 100, 100, 0.8);
+}
+
+body #boton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100px;
+  background: #000;
+}
+
+body #boton a {
+  position: absolute;
+  padding: 15px 40px;
+  border: 2px solid #fff;
+  font-family: sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 25px;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 60px;
+  color: #da8181;
+  overflow: hidden;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+body #boton a:hover {
+  color: #fff;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
+body #boton a::before {
+  content: "";
+  position: absolute;
+  left: 60px;
+  top: 50%;
+  -webkit-transform: translateY(-50%) scale(0);
+          transform: translateY(-50%) scale(0);
+  width: 10px;
+  height: 10px;
+  background: #b32400;
+  border-radius: 50%;
+  z-index: -1;
+  -webkit-transition-property: left, -webkit-transform;
+  transition-property: left, -webkit-transform;
+  transition-property: left, transform;
+  transition-property: left, transform, -webkit-transform;
+  -webkit-transition-delay: 0s, 0s;
+          transition-delay: 0s, 0s;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-duration: 1s,0.5s;
+          transition-duration: 1s,0.5s;
+}
+
+body #boton a:hover::before {
+  left: 10px;
+  -webkit-transition-delay: 0s,1s;
+          transition-delay: 0s,1s;
+  -webkit-transform: translateY(-50%) scale(30);
+          transform: translateY(-50%) scale(30);
+  opacity: 1;
+}
+
+body #boton a::after {
+  content: "";
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  -webkit-transform: translateY(-50%) scale(0.6);
+          transform: translateY(-50%) scale(0.6);
+  width: 10px;
+  height: 10px;
+  background: #b32400;
+  border-radius: 50%;
+  z-index: -1;
+  -webkit-transition-property: right, -webkit-transform;
+  transition-property: right, -webkit-transform;
+  transition-property: right, transform;
+  transition-property: right, transform, -webkit-transform;
+  -webkit-transition-delay: 0s, 0s;
+          transition-delay: 0s, 0s;
+  -webkit-transition-duration: 1s,0.5s;
+          transition-duration: 1s,0.5s;
+  opacity: 0;
+}
+
+body #boton a:hover::after {
+  right: 10px;
+  -webkit-transition-delay: 0s,1s;
+          transition-delay: 0s,1s;
+  -webkit-transform: translateY(-50%) scale(30);
+          transform: translateY(-50%) scale(30);
+  opacity: 1;
+}
+
+body #star {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .open {
+  display: initial;
+}
+
+body .close {
+  display: none;
+}
+
+body .checked {
+  color: orange;
+}
+/*# sourceMappingURL=style.css.map */
