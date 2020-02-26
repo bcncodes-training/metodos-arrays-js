@@ -1,0 +1,11 @@
+/* style.scss */
+.imagen{
+    background: white url("https://picsum.photos/id/237/200/300") no-repeat;
+    background-size: contain;
+    width: 100vw;
+    height:30vh;
+};
+
+.checked{
+    color: orange;
+};
